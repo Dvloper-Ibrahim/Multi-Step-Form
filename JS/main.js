@@ -29,7 +29,7 @@ window.addEventListener("load", function () {
     let isDesiredStep =
       steps[i].querySelector("p").innerHTML.replace(" ", "-").toLowerCase() ===
       pageName;
-    if (pageName === "index") {
+    if (pageName === "") {
       steps[i].classList.toggle("active");
       break;
     }
@@ -45,7 +45,7 @@ window.addEventListener("load", function () {
   Adding Some Manipulations, Event Listeners and Getting Data From sessionStorage To
   Some Elements In The Current Step When Loaded.
 */
-if (pageName === "index") {
+if (pageName === "") {
   personalInfo.forEach((input) => {
     if (input.type === "text") input.oninput = checkName;
     else if (input.type === "email") input.oninput = checkEmail;
@@ -288,7 +288,7 @@ function nextStep() {
 
 // Going To The Next Step Depending On Some Checks Concerning The Current Step.
 function goForward() {
-  if (pageName === "index" && checkName() && checkEmail() && checkPhone()) {
+  if (pageName === "" && checkName() && checkEmail() && checkPhone()) {
     personalInfo.forEach((e) => {
       sessionStorage.setItem(e.id, e.value);
     });
@@ -326,7 +326,7 @@ function goBackward() {
         .innerHTML.replace(" ", "-")
         .toLowerCase();
       previousPage === "your-info"
-        ? window.location.replace("./index.html")
+        ? window.location.replace("./")
         : window.location.replace(`./${previousPage}.html`);
       break;
     }
