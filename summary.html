@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="CSS/main.css" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <title>Multi-step Form</title>
+  </head>
+  <body>
+    <main>
+      <!-- Sidebar Start -->
+      <aside>
+        <ul class="steps">
+          <li>
+            <span class="step-number">1</span>
+            <div class="data">
+              <span>STEP 1</span>
+              <p>YOUR INFO</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">2</span>
+            <div class="data">
+              <span>STEP 2</span>
+              <p>SELECT PLAN</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">3</span>
+            <div class="data">
+              <span>STEP 3</span>
+              <p>ADD-ONS</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">4</span>
+            <div class="data">
+              <span>STEP 4</span>
+              <p>SUMMARY</p>
+            </div>
+          </li>
+        </ul>
+        <img src="assets/images/background.png" alt="Sidebar Background" />
+      </aside>
+      <!-- Sidebar End -->
+      <!-- Step Details Start -->
+      <section class="step-details">
+        <h2>Finishing up</h2>
+        <p>Double-check everything looks OK before confirming.</p>
+        <div class="summary">
+          <div class="details">
+            <div class="selected-plan">
+              <div>
+                <h4>Arcade (Monthly)</h4>
+                <a href="./select-plan.html">Change</a>
+              </div>
+              <span class="cost">$9/mo</span>
+            </div>
+          </div>
+          <div class="total-cost">
+            <span>Total (per month)</span>
+            <span class="cost">$12/mo</span>
+          </div>
+        </div>
+      </section>
+      <div class="buttons">
+        <button class="back">Go Back</button>
+        <button class="next">Confirm</button>
+      </div>
+      <div class="thank-you">
+        <span><i class="fa-solid fa-check"></i></span>
+        <h2>Thank you!</h2>
+        <p>
+          Thanks for confirming your subscription! We hope you have fun using
+          our platform. If you ever need support, please feel free to email us
+          at support@loremgaming.com.
+        </p>
+      </div>
+      <!-- Step Details End -->
+    </main>
+    <script src="JS/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="CSS/main.css" />
+    <title>Multi-step Form</title>
+  </head>
+  <body>
+    <main>
+      <!-- Sidebar Start -->
+      <aside>
+        <ul class="steps">
+          <li>
+            <span class="step-number">1</span>
+            <div class="data">
+              <span>STEP 1</span>
+              <p>YOUR INFO</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">2</span>
+            <div class="data">
+              <span>STEP 2</span>
+              <p>SELECT PLAN</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">3</span>
+            <div class="data">
+              <span>STEP 3</span>
+              <p>ADD-ONS</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">4</span>
+            <div class="data">
+              <span>STEP 4</span>
+              <p>SUMMARY</p>
+            </div>
+          </li>
+        </ul>
+        <img src="assets/images/background.png" alt="Sidebar Background" />
+      </aside>
+      <!-- Sidebar End -->
+      <!-- Step Details Start -->
+      <section class="step-details">
+        <h2>Personal info</h2>
+        <p>Please provide your name, email address, and phone number.</p>
+        <div class="step1-input">
+          <label>Name</label>
+          <input type="text" id="name" placeholder="e.g. Stephen King" />
+          <span>This field is required</span>
+        </div>
+        <div class="step1-input">
+          <label>Email Address</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="e.g. stephenking@lorem.com"
+          />
+          <span>This field is required</span>
+        </div>
+        <div class="step1-input">
+          <label>Phone Number</label>
+          <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" />
+          <span>This field is required</span>
+        </div>
+      </section>
+      <div class="buttons">
+        <button class="next">Next Step</button>
+      </div>
+      <!-- Step Details End -->
+    </main>
+    <script src="JS/main.js"></script>
+  </body>
+</html>

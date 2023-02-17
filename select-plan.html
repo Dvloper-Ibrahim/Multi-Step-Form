@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="CSS/main.css" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <title>Multi-step Form</title>
+  </head>
+  <body>
+    <main>
+      <!-- Sidebar Start -->
+      <aside>
+        <ul class="steps">
+          <li>
+            <span class="step-number">1</span>
+            <div class="data">
+              <span>STEP 1</span>
+              <p>YOUR INFO</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">2</span>
+            <div class="data">
+              <span>STEP 2</span>
+              <p>SELECT PLAN</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">3</span>
+            <div class="data">
+              <span>STEP 3</span>
+              <p>ADD-ONS</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">4</span>
+            <div class="data">
+              <span>STEP 4</span>
+              <p>SUMMARY</p>
+            </div>
+          </li>
+        </ul>
+        <img src="assets/images/background.png" alt="Sidebar Background" />
+      </aside>
+      <!-- Sidebar End -->
+      <!-- Step Details Start -->
+      <section class="step-details">
+        <h2>Select your plan</h2>
+        <p>You have the option of monthly or yearly billing.</p>
+        <div class="plans">
+          <span class="alert">Please, select a plan</span>
+          <input type="radio" name="Plan" id="arcade" value="Arcade" />
+          <label for="arcade">
+            <i class="fa-solid fa-dice-d6 orange"></i>
+            <div class="info">
+              <span>Arcade</span>
+              <span class="price">$9/mo</span>
+              <span>2 months free</span>
+            </div>
+          </label>
+          <input type="radio" name="Plan" id="advanced" value="Advanced" />
+          <label for="advanced">
+            <i class="fa-solid fa-gamepad red"></i>
+            <div class="info">
+              <span>Advanced</span>
+              <span class="price">$12/mo</span>
+              <span>2 months free</span>
+            </div>
+          </label>
+          <input type="radio" name="Plan" id="pro" value="Pro" />
+          <label for="pro">
+            <i class="fa-solid fa-vr-cardboard blue"></i>
+            <div class="info">
+              <span>Pro</span>
+              <span class="price">$15/mo</span>
+              <span>2 months free</span>
+            </div>
+          </label>
+        </div>
+        <div class="plan-type">
+          <span>Monthly</span>
+          <label>
+            <input class="toggle-checkbox" type="checkbox" />
+            <div class="toggle-switch"></div>
+          </label>
+          <span>Yearly</span>
+        </div>
+      </section>
+      <!-- Step Details End -->
+      <div class="buttons">
+        <button class="back">Go Back</button>
+        <button class="next">Next Step</button>
+      </div>
+    </main>
+    <script src="JS/main.js"></script>
+  </body>
+</html>
