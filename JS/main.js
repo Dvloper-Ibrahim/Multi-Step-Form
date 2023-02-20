@@ -5,11 +5,11 @@ const nextButton = document.querySelector(".buttons .next");
 const backButton = document.querySelector(".buttons .back");
 
 // Required Data For Step 1
-const personalInfo = document.querySelectorAll(".step1-input input");
+const personalInfo = document.querySelectorAll(".step-1 input");
 
 // Required Data For Step 2
-const plans = document.querySelectorAll(".step-details .plans input");
-const planTypeSetter = document.querySelector(".step-details .plan-type input");
+const plans = document.querySelectorAll(".step-2 .plans input");
+const planTypeSetter = document.querySelector(".step-2 .plan-type input");
 const plansPrices = document.querySelectorAll(".plans .price");
 const plansOffers = document.querySelectorAll(".plans label span:last-child");
 
@@ -85,10 +85,12 @@ if (pageName === "") {
   sessionStorage.setItem("add-ons", JSON.stringify(addOns));
 } else if (pageName === "summary") {
   if (!sessionStorage.getItem("total-cost")) {
-    document.querySelector(".step-details").innerHTML = "";
+    document.querySelector(".step-4").innerHTML = "";
     document.querySelector(".step-details").style.justifyContent = "center";
+    document.querySelector(".step-details").style.minHeight =
+      "calc(100vh - 190px)";
     thanksSection.style.display = "block";
-    document.querySelector(".step-details").appendChild(thanksSection);
+    document.querySelector(".step-4").appendChild(thanksSection);
     nextButton.parentElement.style.display = "none";
   } else setFormSummary();
 }
@@ -306,10 +308,12 @@ function goForward() {
   } else if (pageName === "summary") {
     let confirmMsg = confirm("Are you sure ?");
     if (confirmMsg) {
-      document.querySelector(".step-details").innerHTML = "";
+      document.querySelector(".step-4").innerHTML = "";
       document.querySelector(".step-details").style.justifyContent = "center";
+      document.querySelector(".step-details").style.minHeight =
+        "calc(100vh - 190px)";
       thanksSection.style.display = "block";
-      document.querySelector(".step-details").appendChild(thanksSection);
+      document.querySelector(".step-4").appendChild(thanksSection);
       nextButton.parentElement.style.display = "none";
       sessionStorage.clear();
     }

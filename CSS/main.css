@@ -1,5 +1,8 @@
+/*
+***  Design For Desktop First Is Considered  ***
+*/
 body {
-  background-color: #eef5ff;
+  background-color: #deecff;
   font-family: Ubuntu;
 }
 
@@ -24,7 +27,8 @@ main {
   box-shadow: 0 0 20px 0px #c2dafc;
 }
 
-@media (max-width: 855px) {
+/* For Landscape Tablets And Mobile Phones */
+@media (max-width: 991px) {
   main {
     padding: 0;
     border-radius: 0;
@@ -32,7 +36,8 @@ main {
     min-height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: #deecff;
+    background-color: transparent;
+    box-shadow: none;
   }
 }
 /* Form Page */
@@ -43,12 +48,8 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #483eff;
-  border-radius: 6px;
-}
-aside img {
-  max-width: 100%;
-  margin-top: auto;
+  background-image: url(../assets/images/bg-sidebar-desktop.svg);
+  background-size: cover;
   border-radius: 6px;
 }
 .steps {
@@ -94,21 +95,22 @@ aside img {
   letter-spacing: 2px;
 }
 
-@media (max-width: 855px) {
+/* For Landscape Tablets And Mobile Phones */
+@media (max-width: 991px) {
   aside img {
     display: none;
   }
   aside {
     border-radius: 0;
-    background-image: url(../assets/images/background.png);
-    background-position: center 54%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-height: 200px;
+    background-image: url(../assets/images/bg-sidebar-mobile.svg);
+    background-position: center;
+    min-height: 190px;
   }
   .steps {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    max-width: 240px;
+    margin-top: 37px;
   }
   .steps .data {
     display: none;
@@ -116,6 +118,7 @@ aside img {
   .steps .step-number {
     width: 40px;
     height: 40px;
+    margin: 0;
   }
   .steps li:not(:last-child) {
     margin-bottom: 0;
@@ -125,37 +128,41 @@ aside img {
 
 /* ============================================================================ */
 
-/* Step-1 Section */
 .step-details {
   flex: 2;
-  color: #052852;
+  color: #02295a;
   width: calc(100% - 90px);
   margin: 0 60px 0 80px;
   padding: 28px 0 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
-.step-details > h2 {
+.step-details h2 {
   font-size: 30px;
   margin-bottom: 7px;
 }
-.step-details > p {
-  font-size: 16px;
-  color: gray;
+.step-details p {
+  color: hsl(231, 11%, 63%);
   margin-bottom: 30px;
 }
-.step-details .step1-input {
+
+/* Step-1 Section */
+.step-1 .step1-input {
   display: flex;
   flex-direction: column;
-  margin-bottom: 18px;
   position: relative;
 }
-.step-details .step1-input label {
+.step-1 .step1-input:not(:last-child) {
+  margin-bottom: 18px;
+}
+.step-1 .step1-input label {
   font-weight: 500;
   font-size: 14px;
   margin-bottom: 5px;
 }
-.step-details .step1-input input {
+.step-1 .step1-input input {
   height: 45px;
   padding-left: 15px;
   border-radius: 8px;
@@ -166,13 +173,13 @@ aside img {
   font-weight: bold;
   color: #052852;
 }
-.step-details .step1-input input::placeholder {
+.step-1 .step1-input input::placeholder {
   color: rgb(177, 177, 177);
 }
-.step-details .step1-input input:focus {
+.step-1 .step1-input input:focus {
   border-color: #5349a9;
 }
-.step-details .step1-input span {
+.step-1 .step1-input span {
   position: absolute;
   right: 0;
   top: 2px;
@@ -182,12 +189,6 @@ aside img {
   display: none;
 }
 .buttons {
-  position: absolute;
-  bottom: 0;
-  right: 50px;
-  width: 503px;
-  padding: 25px;
-  margin-top: auto;
   display: flex;
   justify-content: space-between;
 }
@@ -218,37 +219,44 @@ aside img {
   color: black;
 }
 
-@media (max-width: 855px) {
+/* For Landscape Tablets And Mobile Phones */
+@media (max-width: 991px) {
   .step-details {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: flex-end;
+    min-height: 100vh;
+  }
+  .step-1,
+  .step-2,
+  .step-3,
+  .step-4 {
     position: absolute;
     background-color: white;
-    margin: 0;
-    top: 120px;
+    top: -70px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 35px 25px 25px;
+    padding: 35px 25px;
     width: calc(100% - 50px);
     border-radius: 10px;
-    min-height: 450px;
     box-shadow: 0 10px 20px 0px #cacaca;
   }
   .buttons {
-    width: 100%;
     background-color: white;
     padding: 20px 24px;
-    right: 0px;
   }
 }
 /* Step-1 Section */
 
 /* Step-2 Section */
-.step-details .plans {
+.step-2 .plans {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
   position: relative;
 }
-.step-details .plans .alert {
+.step-2 .plans .alert {
   position: absolute;
   right: 0;
   top: -20px;
@@ -257,7 +265,7 @@ aside img {
   color: #e40b28;
   display: none;
 }
-.step-details .plans label {
+.step-2 .plans label {
   display: flex;
   flex-direction: column;
   width: calc((100% - 40px) / 3);
@@ -267,79 +275,61 @@ aside img {
   padding: 20px;
   cursor: pointer;
 }
-.step-details .plans input {
+.step-2 .plans input {
   display: none;
 }
-.step-details .plans input:hover + label {
+.step-2 .plans input:hover + label {
   border: 2px solid #534aa5;
 }
-.step-details .plans input:checked + label {
+.step-2 .plans input:checked + label {
   border: 2px solid #534aa5;
-  background-color: #f8f9fe;
+  background-color: hsl(217, 100%, 97%);
 }
-.step-details .plans label i {
-  width: 40px;
-  height: 40px;
-  background-color: #ddd;
-  display: grid;
-  place-content: center;
-  border-radius: 50%;
-  color: white;
-}
-.step-details .plans label .orange {
-  background-color: #ffb37b;
-}
-.step-details .plans label .red {
-  background-color: #fa808d;
-}
-.step-details .plans label .blue {
-  background-color: #4840f8;
-}
-.step-details .plans label .info {
+.step-2 .plans label .info {
   margin-top: 55px;
 }
-.step-details .plans label span:first-of-type {
+.step-2 .plans label span:first-of-type {
   display: block;
   color: #334e6b;
   font-weight: bold;
   font-size: 18px;
 }
-.step-details .plans label span.price {
+.step-2 .plans label span.price {
   display: block;
   color: #a4a5aa;
   margin-top: 3px;
 }
-.step-details .plans label span:last-child:not(:nth-of-type(2)) {
+.step-2 .plans label span:last-child:not(:nth-of-type(2)) {
   color: #334e6b;
   font-weight: bold;
   font-size: 14px;
   margin-top: 3px;
   display: none;
 }
-.step-details .plan-type {
-  background-color: #f8f9fe;
+.step-2 .plan-type {
+  background-color: hsl(217, 100%, 97%);
   height: 50px;
   border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.step-details .plan-type label {
+.step-2 .plan-type label {
   margin: 0 10px;
 }
-.step-details .toggle-checkbox {
+.step-2 .toggle-checkbox {
   display: none;
 }
-.step-details .toggle-switch {
+.step-2 .toggle-switch {
   width: 45px;
   height: 20px;
-  background-color: #042858;
+  background-color: hsl(213, 96%, 18%);
   border-radius: 10px;
   margin-top: 3px;
   position: relative;
   cursor: pointer;
 }
-.step-details .toggle-switch::before {
+.step-2 .toggle-switch::before {
   content: "";
   position: absolute;
   width: 12px;
@@ -350,47 +340,45 @@ aside img {
   top: 4px;
   transition: 0.3s;
 }
-.step-details .toggle-checkbox:checked + .toggle-switch::before {
+.step-2 .toggle-checkbox:checked + .toggle-switch::before {
   left: 29px;
 }
 
-@media (max-width: 855px) {
-  .step-details .plans {
+/* For Landscape Tablets And Mobile Phones */
+@media (max-width: 991px) {
+  .step-2 .plans {
     flex-direction: column;
   }
-  .plans label i {
+  .plans label svg {
     margin-right: 20px;
   }
-  .step-details .plans label .info {
+  .step-2 .plans label .info {
     margin: 0;
   }
-  .step-details .plans label {
+  .step-2 .plans label {
     flex-direction: row;
     width: 100%;
     min-height: 50px;
-    /* margin-bottom: 10px; */
-    /* flex-direction: column; */
-    /* width: calc((100% - 40px) / 3); */
-    /* min-height: 175px; */
+    align-items: center;
   }
-  .step-details .plans label:not(:last-of-type) {
+  .step-2 .plans label:not(:last-of-type) {
     margin-bottom: 10px;
   }
-  .step-details .plans label span.price {
+  .step-2 .plans label span.price {
     margin-bottom: 3px;
   }
 }
 /* Step-2 Section */
 
 /* Step-3 Section */
-.step-details .add-ons input {
+.step-3 .add-ons input {
   display: none;
 }
-.step-details .add-ons input:checked + label {
+.step-3 .add-ons input:checked + label {
   border-color: #4e49ad;
   background-color: #f8f9fe;
 }
-.step-details .add-ons label {
+.step-3 .add-ons label {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -401,13 +389,13 @@ aside img {
   position: relative;
   transition: 0.2s;
 }
-.step-details .add-ons label:not(:last-of-type) {
+.step-3 .add-ons label:not(:last-of-type) {
   margin-bottom: 15px;
 }
-.step-details .add-ons label:hover {
+.step-3 .add-ons label:hover {
   border-color: #4e49ad;
 }
-.step-details .add-ons .check-box {
+.step-3 .add-ons .check-box {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -416,7 +404,7 @@ aside img {
   display: grid;
   place-items: center;
 }
-.step-details .add-ons .check-box::before {
+.step-3 .add-ons .check-box::before {
   content: "\f00c";
   font-family: var(--fa-style-family-classic);
   font-weight: bold;
@@ -432,32 +420,33 @@ aside img {
   transform: scale(0) rotate(360deg);
   transition: 0.2s;
 }
-.step-details .add-ons input:checked + label .check-box::before {
+.step-3 .add-ons input:checked + label .check-box::before {
   transform: scale(1);
 }
-.step-details .add-ons div {
+.step-3 .add-ons div {
   margin-left: 40px;
 }
-.step-details .add-ons div h4 {
+.step-3 .add-ons div h4 {
   margin-bottom: 5px;
 }
-.step-details .add-ons div span {
+.step-3 .add-ons div span {
   color: gray;
   font-size: 14px;
 }
-.step-details .add-ons .price {
+.step-3 .add-ons .price {
   color: #5346c9;
 }
 
-@media (max-width: 855px) {
-  .step-details .add-ons label {
+/* For Landscape Tablets And Mobile Phones */
+@media (max-width: 991px) {
+  .step-3 .add-ons label {
     font-size: 0.95em;
   }
 }
 /* Step-3 Section */
 
 /* Step-4 Section */
-.step-details .summary .details {
+.step-4 .summary .details {
   background-color: #f8f9fe;
   border-radius: 10px;
   padding: 20px;
@@ -508,16 +497,13 @@ aside img {
   display: none;
 }
 .thank-you span {
-  width: 70px;
-  height: 70px;
+  display: block;
+  height: 80px;
   border-radius: 50%;
-  background-color: #f9818d;
-  transform: translateX(-50%);
-  margin-left: 50%;
-  margin-bottom: 30px;
-  display: grid;
-  place-content: center;
-  overflow: hidden;
+  background-image: url(../assets/images/icon-thank-you.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 30px 0;
 }
 .thank-you i {
   width: 35px;
@@ -532,9 +518,10 @@ aside img {
 .thank-you h2 {
   font-size: 26px;
   margin-bottom: 12px;
+  color: #02295a;
 }
 .thank-you p {
-  color: gray;
+  color: hsl(231, 11%, 63%);
   line-height: 1.5;
 }
 /* Thank You Section */

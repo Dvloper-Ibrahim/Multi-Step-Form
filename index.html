@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <meta http-equiv="Permissions-Policy" content="interest-cohort=()" /> -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -48,36 +47,37 @@
             </div>
           </li>
         </ul>
-        <img src="assets/images/background.png" alt="Sidebar Background" />
       </aside>
       <!-- Sidebar End -->
       <!-- Step Details Start -->
       <section class="step-details">
-        <h2>Personal info</h2>
-        <p>Please provide your name, email address, and phone number.</p>
-        <div class="step1-input">
-          <label>Name</label>
-          <input type="text" id="name" placeholder="e.g. Stephen King" />
-          <span>This field is required</span>
+        <div class="step-1">
+          <h2>Personal info</h2>
+          <p>Please provide your name, email address, and phone number.</p>
+          <div class="step1-input">
+            <label>Name</label>
+            <input type="text" id="name" placeholder="e.g. Stephen King" />
+            <span>This field is required</span>
+          </div>
+          <div class="step1-input">
+            <label>Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="e.g. stephenking@lorem.com"
+            />
+            <span>This field is required</span>
+          </div>
+          <div class="step1-input">
+            <label>Phone Number</label>
+            <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" />
+            <span>This field is required</span>
+          </div>
         </div>
-        <div class="step1-input">
-          <label>Email Address</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="e.g. stephenking@lorem.com"
-          />
-          <span>This field is required</span>
-        </div>
-        <div class="step1-input">
-          <label>Phone Number</label>
-          <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" />
-          <span>This field is required</span>
+        <div class="buttons">
+          <button class="next">Next Step</button>
         </div>
       </section>
-      <div class="buttons">
-        <button class="next">Next Step</button>
-      </div>
       <!-- Step Details End -->
     </main>
     <script src="JS/main.js"></script>
