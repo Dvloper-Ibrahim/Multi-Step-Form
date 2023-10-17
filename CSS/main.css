@@ -6,6 +6,11 @@ body {
   font-family: Ubuntu;
 }
 
+@font-face {
+  font-family: Ubuntu;
+  src: url(../assets/fonts/Ubuntu-Regular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
